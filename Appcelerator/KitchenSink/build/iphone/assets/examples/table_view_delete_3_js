@@ -1,0 +1,4 @@
+var win=Ti.UI.currentWindow;var data=[{title:'Row 1',header:'header 1'},{title:'Row 2',header:'header 2'},{title:'Row 3',header:'header 3'},{title:'Row 4',header:'header 4'}];var tableview=Ti.UI.createTableView({data:data,editable:true});tableview.addEventListener('delete',function(e)
+{var s=e.section;Ti.API.info('rows '+s.rows+' rowCount '+s.rowCount+' headerTitle '+s.headerTitle+' title '+e.rowData.title);Ti.API.info("deleted - row="+e.row+", index="+e.index+", section="+e.section+' foo '+e.rowData.foo);});Ti.UI.currentWindow.add(tableview);var edit=Ti.UI.createButton({title:'Edit'});edit.addEventListener('click',function()
+{win.setRightNavButton(cancel);tableview.editing=true;});var cancel=Ti.UI.createButton({title:'Cancel',style:Ti.UI.iPhone.SystemButtonStyle.DONE});cancel.addEventListener('click',function()
+{win.setRightNavButton(edit);tableview.editing=false;});win.setRightNavButton(edit);

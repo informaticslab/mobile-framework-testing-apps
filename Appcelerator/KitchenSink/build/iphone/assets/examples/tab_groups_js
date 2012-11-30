@@ -1,0 +1,18 @@
+var win=Ti.UI.currentWindow;var tabGroup=win.tabGroup;var addTabButton=Ti.UI.createButton({title:'Add/Remove Tab',top:10,height:40,width:200});addTabButton.addEventListener('click',function(e)
+{if(tabGroup.tabs.length==5)
+{var win=Ti.UI.createWindow({title:'New Tab Window',barColor:'#000'});var newtab=Ti.UI.createTab({icon:'../images/tabs/KS_nav_mashup.png',title:'New Tab',win:win});tabGroup.addTab(newtab);}
+else
+{var newtab=tabGroup.tabs[5];tabGroup.removeTab(newtab);}});var animateTabButton=Ti.UI.createButton({title:'Animate Tab Group',top:60,height:40,width:200});var transformed=false;animateTabButton.addEventListener('click',function(e)
+{if(transformed===false)
+{var transform=Ti.UI.create2DMatrix();transform=transform.scale(0.6);transform=transform.rotate(45);tabGroup.animate({transform:transform,duration:1000});transformed=true;}
+else
+{var transform=Ti.UI.create2DMatrix();tabGroup.animate({transform:transform,duration:1000});transformed=false;}});var closeTabGroupButton=Ti.UI.createButton({title:'Close/Animate Tab Group',top:110,height:40,width:200});closeTabGroupButton.addEventListener('click',function(e)
+{tabGroup.animate({opacity:0,duration:1000},function()
+{tabGroup.close();});});var setActiveTabButton=Ti.UI.createButton({title:'Set Active Tab (Index)',top:160,height:40,width:200});setActiveTabButton.addEventListener('click',function(e)
+{tabGroup.setActiveTab(1);});var setActiveTabObjectButton=Ti.UI.createButton({title:'Set Active Tab (Object)',top:210,height:40,width:200});setActiveTabObjectButton.addEventListener('click',function(e)
+{tabGroup.setActiveTab(tabGroup.tabs[1]);});var customizationButton=Ti.UI.createButton({title:'Switch customization off',top:260,height:40,width:200});customizationButton.addEventListener('click',function(e)
+{var text='Switch customization ';if(tabGroup.allowUserCustomization){tabGroup.allowUserCustomization=false;text+='on';}
+else{tabGroup.allowUserCustomization=true;text+='off';}
+customizationButton.title=text;});var openLabel=Ti.UI.createLabel({text:'Tab Group has '+Ti.UI.currentTabGroup.tabs.length+' tabs',color:'#999',font:{fontFamily:'Helvetica Neue',fontSize:15},textAlign:'center',top:310,width:'auto',height:'auto'});if(Ti.Platform.name=='iPhone OS')
+{win.add(addTabButton);win.add(animateTabButton);win.add(closeTabGroupButton);win.add(customizationButton);}
+win.add(setActiveTabButton);win.add(setActiveTabObjectButton);win.add(openLabel);

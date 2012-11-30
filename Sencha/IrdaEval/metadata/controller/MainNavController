@@ -1,0 +1,144 @@
+{
+    "id": "ExtBox1-ext-gen2997",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MainNavController",
+        "designer|userAlias": ""
+    },
+    "customConfigs": [],
+    "designerId": "7e148fd8-25c6-4b4f-9a80-23d6ef373e5a",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen3932",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "nav",
+                "selector": "#mainNav",
+                "designer|userClassName": "nav"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen4349",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "evalList",
+                "selector": "#evalList",
+                "designer|userClassName": "evalList"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5692",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "var me = this,",
+                    "    evalmodule,",
+                    "    nextView;",
+                    "",
+                    "if (record) {",
+                    "",
+                    "",
+                    "    console.log('got here');",
+                    "    var nav = me.getNav();",
+                    "    evalmodule = record.get('name');",
+                    "    console.log('Record name = %s', evalmodule);",
+                    "",
+                    "    if ( evalmodule == 'Buttons' ) {",
+                    "        nextView = Ext.create('IrdaEval.view.EvaluateButtons', {",
+                    "            title: 'Evaluate Buttons'",
+                    "        });",
+                    "        console.log('Button eval selected, ButtonsView = %s', nextView);",
+                    "    } else if (evalmodule == 'Picker'){",
+                    "        nextView = Ext.create('IrdaEval.view.PickerContainer', {",
+                    "            title: 'Evaluate Picker'",
+                    "        });",
+                    "        console.log('Picker eval selected, PickerView = %s', nextView);",
+                    "    } else if (evalmodule == 'Images'){",
+                    "        nextView = Ext.create('IrdaEval.view.ImageContainer', {",
+                    "            title: 'Evaluate Images'",
+                    "        });",
+                    "        console.log('Image eval selected, ImageView = %s', nextView);",
+                    "    } else if (evalmodule == 'File IO'){",
+                    "        nextView = Ext.create('IrdaEval.view.EvaluateFile', {",
+                    "            title: 'Evaluate File IO'",
+                    "        });",
+                    "        console.log('File eval selected, view = %s', nextView);",
+                    "    } else if (evalmodule == 'Camera'){",
+                    "        nextView = Ext.create('IrdaEval.view.CameraView', {",
+                    "            title: 'Evaluate Camera'",
+                    "        });",
+                    "        console.log('Camera eval selected, view = %s', nextView);",
+                    "    } else if (evalmodule == 'Sliders'){",
+                    "        nextView = Ext.create('IrdaEval.view.SlidersView', {",
+                    "            title: 'Evaluate Sliders'",
+                    "        });",
+                    "        console.log('Slider eval selected, view = %s', nextView);",
+                    "    } else if (evalmodule == 'Accelerometer'){",
+                    "        nextView = Ext.create('IrdaEval.view.AccelerometerView', {",
+                    "            title: 'Evaluate Accelerometer'",
+                    "        });",
+                    "        console.log('Accelerometer eval selected, view = %s', nextView);",
+                    "    }",
+                    "    nav.push(nextView);",
+                    "}"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "#evalList",
+                "designer|userClassName": "onListItemTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen2988",
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "var me = this;",
+                    ""
+                ],
+                "designer|userClassName": "init"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-basic-function",
+            "expanded": true
+        }
+    ]
+}

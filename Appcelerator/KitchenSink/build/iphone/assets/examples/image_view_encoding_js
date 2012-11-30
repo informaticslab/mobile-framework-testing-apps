@@ -1,0 +1,1 @@
+var win=Ti.UI.currentWindow;var test_img=Ti.UI.createImageView({image:'http://www.zoomout.gr/assets/media/PICTURES/'+encodeURIComponent('ΜΟΥΣΙΚΗ')+'/651_thumb1.jpg'});win.add(test_img);

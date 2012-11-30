@@ -1,0 +1,57 @@
+{
+    "id": "ExtBox1-ext-gen18256",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "accView",
+        "layout": "vbox",
+        "designer|userClassName": "AccelerometerView"
+    },
+    "customConfigs": [],
+    "designerId": "2ea4a580-9776-4db1-abbe-df5bbf86f8fb",
+    "$viewOrder": 9,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen18524",
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": 20,
+                "centered": true,
+                "html": "Acceleration X:",
+                "ui": "light",
+                "designer|userClassName": "MyLabel",
+                "layout|flex": 1
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen19328",
+            "type": "label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": 20,
+                "centered": true,
+                "id": "accX",
+                "designer|userClassName": "MyLabel1",
+                "layout|flex": 1
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

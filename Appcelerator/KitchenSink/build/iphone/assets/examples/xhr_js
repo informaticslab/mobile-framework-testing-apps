@@ -1,0 +1,5 @@
+var data=[{title:'Error Callback',hasChild:true,test:'../examples/xhr_error.js'},{title:'Binary Data',hasChild:true,test:'../examples/xhr_binarydata.js'},{title:'XML Data',hasChild:true,test:'../examples/xhr_xml.js'},{title:'XML Properties',hasChild:true,test:'../examples/xhr_properties.js'},{title:'File Download',hasChild:true,test:'../examples/xhr_filedownload.js'},{title:'UTF-8 + GET/POST',hasChild:true,test:'../examples/xhr_utf8.js'},{title:'Cookies',hasChild:true,test:'../examples/xhr_cookie.js'},{title:'setTimeout',hasChild:true,test:'../examples/xhr_settimeout.js'}];if(Ti.Platform.name=='iPhone OS')
+{data.push({title:'File Upload',hasChild:true,test:'../examples/xhr_fileupload.js'});}
+var tableview=Ti.UI.createTableView({data:data});tableview.addEventListener('click',function(e)
+{if(e.rowData.test)
+{var win=Ti.UI.createWindow({url:e.rowData.test,title:e.rowData.title});Ti.UI.currentTab.open(win,{animated:true});}});Ti.UI.currentWindow.add(tableview);

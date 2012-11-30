@@ -1,0 +1,7 @@
+var data=[{title:'Local',hasChild:true,test:'../examples/movie_local.js'}];Ti.include("version.js");if(isIPhone3_2_Plus())
+{data.push({title:'Embedded Video',hasChild:true,test:'../examples/movie_embed.js'});}
+data.push({title:'Remote Streaming',hasChild:true,test:'../examples/movie_remote.js'});if(Ti.Platform.name=='iPhone OS')
+{data.push({title:'Remote Streaming 2',hasChild:true,test:'../examples/movie_remote2.js'});}
+var tableview=Ti.UI.createTableView({data:data});tableview.addEventListener('click',function(e)
+{if(e.rowData.test)
+{var win=Ti.UI.createWindow({url:e.rowData.test,title:e.rowData.title});Ti.UI.currentTab.open(win,{animated:true});}});Ti.UI.currentWindow.add(tableview);

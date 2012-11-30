@@ -1,0 +1,180 @@
+{
+    "id": "ExtBox1-ext-gen18037",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Accelerometer"
+    },
+    "customConfigs": [],
+    "designerId": "40d90b9a-6563-48f3-bcf7-750934479a5b",
+    "$viewOrder": 2,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen21533",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "accView",
+                "selector": "#accView",
+                "designer|userClassName": "accView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen22003",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "xValue",
+                "selector": "#accX",
+                "designer|userClassName": "xValue"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen22699",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAccViewActivate",
+                "implHandler": [
+                    "//wait for PhoneGap to load",
+                    "// document.addEventListener(\"deviceready\", loaded, false);",
+                    " console.log('AccView activated.');",
+                    ""
+                ],
+                "name": "activate",
+                "designer|targetType": "AccelerometerView",
+                "designer|controlQuery": "#accView",
+                "designer|userClassName": "onAccViewActivate"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen23374",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSuccess",
+                "designer|params": [
+                    "acceleration"
+                ],
+                "implHandler": [
+                    "    var me = this;",
+                    "    var x = me.getXValue;",
+                    "    x = acceleration.x;",
+                    " "
+                ],
+                "designer|userClassName": "onSuccess"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen23897",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "startWatch",
+                "implHandler": [
+                    "    // Update acceleration every 3 seconds",
+                    "    var options = { frequency: 3000 };",
+                    " ",
+                    "    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);",
+                    ""
+                ],
+                "designer|userClassName": "startWatch"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen24169",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "stopWatch",
+                "implHandler": [
+                    "    if (watchID) {",
+                    "        navigator.accelerometer.clearWatch(watchID);",
+                    "        watchID = null;",
+                    "    }",
+                    ""
+                ],
+                "designer|userClassName": "stopWatch"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen24475",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loaded",
+                "implHandler": [
+                    "    startWatch();",
+                    ""
+                ],
+                "designer|userClassName": "loaded"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen25757",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onError",
+                "implHandler": [
+                    "    alert('onError!');",
+                    ""
+                ],
+                "designer|userClassName": "onError"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

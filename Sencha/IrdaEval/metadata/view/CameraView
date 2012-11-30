@@ -1,0 +1,72 @@
+{
+    "id": "ExtBox1-ext-gen7927",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "cameraView",
+        "layout": "vbox",
+        "designer|userClassName": "CameraView",
+        "designer|userAlias": "cameraView"
+    },
+    "customConfigs": [],
+    "designerId": "73d09eb0-9a96-4f39-a9dd-db7e842903d1",
+    "$viewOrder": 7,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen6714",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer11",
+                "layout|flex": 1
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen2883",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "id": "cameraBtn",
+                        "text": "Take Picture",
+                        "designer|userClassName": "MyButton9"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen7257",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": null,
+                "id": "photoContainer",
+                "designer|userClassName": "MyContainer12",
+                "layout|flex": 3
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

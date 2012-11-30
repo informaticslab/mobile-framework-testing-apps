@@ -1,0 +1,150 @@
+{
+    "name": "IrdaEval",
+    "settings": {
+        "urlPrefix": "http://localhost/~jtq6/sencha/IrdaEval/",
+        "spacesToIndent": 4,
+        "codeGenFormat": "Class",
+        "exportPath": "",
+        "extPath": "http://extjs.cachefly.net/touch/sencha-touch-2.0.1/",
+        "senchaIoKey": "",
+        "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
+        "lineEnding": "LF",
+        "instantiateStore": true,
+        "genTimestamps": false,
+        "saveOnDeploy": false,
+        "appName": "MyApp",
+        "mapsAPI": "http://maps.google.com/maps/api/js?sensor=true"
+    },
+    "xdsVersion": "2.0.0",
+    "xdsBuild": "442",
+    "framework": "touch20",
+    "topInstanceFileMap": {
+        "a77c81c9-5fa8-483e-a2a5-8ef640656c83": {
+            "paths": [
+                "metadata/view/MainNav",
+                "app/view/override/MainNav.js",
+                "app/view/MainNav.js"
+            ],
+            "className": "MainNav"
+        },
+        "1ac21167-80d9-48cf-84ea-77efa69d65d8": {
+            "paths": [
+                "metadata/view/ListContainer",
+                "app/view/override/ListContainer.js",
+                "app/view/ListContainer.js"
+            ],
+            "className": "ListContainer"
+        },
+        "d607c385-2c79-47c3-ad32-7e1ed67debfb": {
+            "paths": [
+                "metadata/store/EvalModulesArrayStore",
+                "app/store/override/EvalModulesArrayStore.js",
+                "app/store/EvalModulesArrayStore.js"
+            ],
+            "className": "EvalModulesArrayStore"
+        },
+        "17a726c0-383d-4b77-86d3-3e585067e65c": {
+            "paths": [
+                "metadata/model/EvalModulesModel",
+                "app/model/override/EvalModulesModel.js",
+                "app/model/EvalModulesModel.js"
+            ],
+            "className": "EvalModulesModel"
+        },
+        "67218f2c-453e-4bf0-a434-c3f1bd2b6d08": {
+            "paths": [
+                "metadata/view/EvaluateButtons",
+                "app/view/override/EvaluateButtons.js",
+                "app/view/EvaluateButtons.js"
+            ],
+            "className": "EvaluateButtons"
+        },
+        "7e148fd8-25c6-4b4f-9a80-23d6ef373e5a": {
+            "paths": [
+                "metadata/controller/MainNavController",
+                "app/controller/override/MainNavController.js",
+                "app/controller/MainNavController.js"
+            ],
+            "className": "MainNavController"
+        },
+        "cca6f26c-93fd-4a5c-8c5b-fa83d4ca8ea7": {
+            "paths": [
+                "metadata/view/PickerContainer",
+                "app/view/override/PickerContainer.js",
+                "app/view/PickerContainer.js"
+            ],
+            "className": "PickerContainer"
+        },
+        "1336a2d1-2ec1-4702-81c7-ffcd276be468": {
+            "paths": [
+                "metadata/view/MyFormPanel",
+                "app/view/override/MyFormPanel.js",
+                "app/view/MyFormPanel.js"
+            ],
+            "className": "MyFormPanel"
+        },
+        "d445d036-9e34-4758-99e1-0b79c01483cc": {
+            "paths": [
+                "metadata/view/ImageContainer",
+                "app/view/override/ImageContainer.js",
+                "app/view/ImageContainer.js"
+            ],
+            "className": "ImageContainer"
+        },
+        "9840c01a-298b-4485-bfc9-2684f30b3005": {
+            "paths": [
+                "metadata/view/EvaluateFile",
+                "app/view/override/EvaluateFile.js",
+                "app/view/EvaluateFile.js"
+            ],
+            "className": "EvaluateFile"
+        },
+        "73d09eb0-9a96-4f39-a9dd-db7e842903d1": {
+            "paths": [
+                "metadata/view/CameraView",
+                "app/view/override/CameraView.js",
+                "app/view/CameraView.js"
+            ],
+            "className": "CameraView"
+        },
+        "9e817447-c808-4a7d-ab69-f0afd323c480": {
+            "paths": [
+                "metadata/controller/Camera",
+                "app/controller/override/Camera.js",
+                "app/controller/Camera.js"
+            ],
+            "className": "Camera"
+        },
+        "43b7a0d5-7280-4ab4-b428-b5556453a81c": {
+            "paths": [
+                "metadata/view/SlidersView",
+                "app/view/override/SlidersView.js",
+                "app/view/SlidersView.js"
+            ],
+            "className": "SlidersView"
+        },
+        "2ea4a580-9776-4db1-abbe-df5bbf86f8fb": {
+            "paths": [
+                "metadata/view/AccelerometerView",
+                "app/view/override/AccelerometerView.js",
+                "app/view/AccelerometerView.js"
+            ],
+            "className": "AccelerometerView"
+        },
+        "40d90b9a-6563-48f3-bcf7-750934479a5b": {
+            "paths": [
+                "metadata/controller/Accelerometer",
+                "app/controller/override/Accelerometer.js",
+                "app/controller/Accelerometer.js"
+            ],
+            "className": "Accelerometer"
+        }
+    },
+    "expandedState": {
+        "data": true,
+        "model": true,
+        "component": true,
+        "controller": true,
+        "resource": true
+    }
+}

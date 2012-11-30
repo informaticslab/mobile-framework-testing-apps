@@ -1,0 +1,84 @@
+{
+    "id": "ExtBox1-ext-gen5346",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PickerContainer"
+    },
+    "customConfigs": [],
+    "designerId": "cca6f26c-93fd-4a5c-8c5b-fa83d4ca8ea7",
+    "$viewOrder": 3,
+    "expanded": false,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen6134",
+            "type": "picker",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ui": "",
+                "useTitles": true,
+                "designer|userClassName": "MyPicker"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen6144",
+                    "type": "button",
+                    "reference": {
+                        "name": "doneButton",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Done",
+                        "designer|userClassName": "MyButton1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen6152",
+                    "type": "button",
+                    "reference": {
+                        "name": "cancelButton",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Cancel",
+                        "designer|userClassName": "MyButton2"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen6160",
+                    "type": "pickerslot",
+                    "reference": {
+                        "name": "slots",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "center",
+                        "data": "[{\"text\":\"Tom\",\"value\":1},{\"text\":\"Brian\",\"value\":2},{\"text\":\"Sara\",\"value\":3},\n{\"text\":\"Dale\",\"value\":4},\n{\"text\":\"J\",\"value\":5},\n{\"text\":\"Greg\",\"value\":6}]",
+                        "name": "MyPickerSlot",
+                        "title": "IRDA Employee",
+                        "designer|userClassName": "MyPickerSlot"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}

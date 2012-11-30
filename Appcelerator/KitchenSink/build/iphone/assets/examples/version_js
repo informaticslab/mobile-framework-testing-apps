@@ -1,0 +1,10 @@
+function isIPhone3_2_Plus()
+{if(Ti.Platform.name=='iPhone OS')
+{var version=Ti.Platform.version.split(".");var major=parseInt(version[0],10);var minor=parseInt(version[1],10);if(major>3||(major==3&&minor>1))
+{return true;}}
+return false;}
+function isiOS4Plus()
+{if(Ti.Platform.name=='iPhone OS')
+{var version=Ti.Platform.version.split(".");var major=parseInt(version[0],10);if(major>=4)
+{return true;}}
+return false;}

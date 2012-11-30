@@ -1,0 +1,1 @@
+var win=Ti.UI.currentWindow;var inputData=[{title:'row 1',header:'Header 1'},{title:'row 2'},{title:'row 3'},{title:'row 4',header:'Header 2'},{title:'row 5'}];var tableView=Ti.UI.createTableView({data:inputData,style:Ti.UI.iPhone.TableViewStyle.GROUPED});win.add(tableView);

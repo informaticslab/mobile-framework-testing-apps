@@ -1,0 +1,34 @@
+{
+    "id": "ExtBox1-ext-gen5539",
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EvalModulesModel"
+    },
+    "customConfigs": [],
+    "designerId": "17a726c0-383d-4b77-86d3-3e585067e65c",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen5744",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaultValue": "['Buttons']",
+                "name": "name",
+                "designer|userClassName": "MyField"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

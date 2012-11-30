@@ -1,0 +1,3 @@
+var win=Ti.UI.currentWindow;win.tabGroup.toImage(function(e)
+{Ti.API.info("tiGroup blob has been rendered: "+e.blob.width+"x"+e.blob.height);});var imageView=Ti.UI.createImageView({image:win.tabGroup.toImage(),width:200,height:300,top:20});win.add(imageView);var l=Ti.UI.createLabel({text:'Click Image of Tab Group',bottom:20,color:'#999',width:'auto',height:'auto'});win.add(l);imageView.addEventListener('click',function()
+{Ti.UI.createAlertDialog({title:'Image View',message:'You clicked me!'}).show();});

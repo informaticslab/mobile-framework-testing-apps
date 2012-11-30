@@ -1,0 +1,15 @@
+var win=Ti.UI.currentWindow;win.orientationModes=[Ti.UI.PORTRAIT,Ti.UI.UPSIDE_PORTRAIT,Ti.UI.LANDSCAPE_LEFT,Ti.UI.LANDSCAPE_RIGHT,];function getOrientation(o)
+{switch(o)
+{case Ti.UI.PORTRAIT:return'portrait';case Ti.UI.UPSIDE_PORTRAIT:return'reverse portrait';case Ti.UI.LANDSCAPE_LEFT:return'landscape';case Ti.UI.LANDSCAPE_RIGHT:return'reverse landscape';case Ti.UI.FACE_UP:return'face up';case Ti.UI.FACE_DOWN:return'face down';case Ti.UI.UNKNOWN:return'unknown';}}
+var l=Ti.UI.createLabel({color:'#999',text:'Current Orientation: '+getOrientation(Ti.Gesture.orientation),top:10,width:300,height:'auto',textAlign:'center'});win.add(l);Ti.Gesture.addEventListener('orientationchange',function(e)
+{l.text='Current Orientation: '+getOrientation(Ti.Gesture.orientation);var orientation=getOrientation(e.orientation);Ti.API.info("orientation changed = "+orientation+", is portrait?"+e.source.isPortrait()+", orientation = "+Ti.Gesture.orientation+"is landscape?"+e.source.isLandscape());});var b1=Ti.UI.createButton({title:'Set Landscape ',width:200,height:40,top:40});b1.addEventListener('click',function()
+{Ti.UI.orientation=Ti.UI.LANDSCAPE_LEFT;});win.add(b1);var b2=Ti.UI.createButton({title:'Set Portrait',width:200,height:40,top:90});b2.addEventListener('click',function()
+{win.orientationModes=[Ti.UI.PORTRAIT];});win.add(b2);var b3=Ti.UI.createButton({title:'Reset orientation',width:200,height:40,top:140});b3.addEventListener('click',function()
+{Ti.API.info("resetting orientation modes");win.orientationModes=[];});win.add(b3);if(Ti.Platform.name=='iPhone OS')
+{var landscape=Ti.UI.createButton({title:'Allow Landscape Only',width:200,height:40,top:190});landscape.addEventListener('click',function()
+{win.orientationModes=[Ti.UI.LANDSCAPE_LEFT,Ti.UI.LANDSCAPE_RIGHT];Ti.UI.orientation=Ti.UI.LANDSCAPE_LEFT;});win.add(landscape);}
+var b4=Ti.UI.createButton({title:'Open A Window',width:200,height:40,top:240});b4.addEventListener('click',function()
+{var subwin=Ti.UI.createWindow({url:'vibrate.js',backgroundColor:'purple'});subwin.orientationModes=[Ti.UI.PORTRAIT,Ti.UI.UPSIDE_PORTRAIT,Ti.UI.LANDSCAPE_LEFT,Ti.UI.LANDSCAPE_RIGHT,];var close=Ti.UI.createButton({title:'close',width:200,height:40,top:60});subwin.add(close);close.addEventListener('click',function()
+{if(Ti.Platform.osname=='android')
+{win.orientationModes=win.orientationModes;}
+subwin.close();});subwin.open();});win.add(b4);

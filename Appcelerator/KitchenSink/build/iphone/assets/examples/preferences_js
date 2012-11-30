@@ -1,0 +1,1 @@
+var btn=Ti.UI.createButton({title:'Click to Open Preferences'});btn.addEventListener('click',function(){Ti.UI.Android.openPreferences();});Ti.UI.currentWindow.add(btn);

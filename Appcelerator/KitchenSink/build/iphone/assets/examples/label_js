@@ -1,0 +1,5 @@
+var data=[{title:'Basic',hasChild:true,test:'../examples/label_basic.js'}];if(Ti.Platform.name=='android')
+{data.push({title:'Auto Link',hasChild:true,test:'../examples/label_linkify.js'});}
+var tableview=Ti.UI.createTableView({data:data});tableview.addEventListener('click',function(e)
+{if(e.rowData.test)
+{var win=Ti.UI.createWindow({url:e.rowData.test,title:e.rowData.title});Ti.UI.currentTab.open(win,{animated:true});}});Ti.UI.currentWindow.add(tableview);

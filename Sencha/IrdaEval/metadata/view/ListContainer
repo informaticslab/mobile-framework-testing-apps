@@ -1,0 +1,39 @@
+{
+    "id": "ExtBox1-ext-gen3636",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": "[\"Buttons\"]",
+        "id": null,
+        "layout": "fit",
+        "designer|userClassName": "ListContainer",
+        "designer|userAlias": "listContainer"
+    },
+    "customConfigs": [],
+    "designerId": "1ac21167-80d9-48cf-84ea-77efa69d65d8",
+    "$viewOrder": 1,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen4113",
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "evalList",
+                "itemTpl": "Evaluate {name}",
+                "store": "EvalModulesArrayStore",
+                "designer|userClassName": "MyList"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

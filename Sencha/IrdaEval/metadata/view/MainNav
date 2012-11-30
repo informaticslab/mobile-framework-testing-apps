@@ -1,0 +1,38 @@
+{
+    "id": "ExtBox1-ext-gen3267",
+    "type": "navigationview",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "id": "mainNav",
+        "designer|userClassName": "MainNav",
+        "designer|userAlias": "mainNav"
+    },
+    "customConfigs": [],
+    "designerId": "a77c81c9-5fa8-483e-a2a5-8ef640656c83",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen4857",
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "IrdaEval",
+                "title": "IRDA Eval"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-linkedinstance",
+            "expanded": true,
+            "masterInstanceId": "ExtBox1-ext-gen3636"
+        }
+    ]
+}

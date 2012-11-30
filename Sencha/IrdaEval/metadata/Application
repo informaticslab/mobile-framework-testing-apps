@@ -1,0 +1,39 @@
+{
+    "id": "ExtBox1-ext-gen2218",
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "EvalModulesModel"
+        ],
+        "stores": [
+            "EvalModulesArrayStore"
+        ],
+        "views": [
+            "MainNav",
+            "ListContainer",
+            "EvaluateButtons",
+            "PickerContainer",
+            "MyFormPanel",
+            "ImageContainer",
+            "EvaluateFile",
+            "SlidersView",
+            "AccelerometerView"
+        ],
+        "name": "IrdaEval",
+        "controllers": [
+            "MainNavController",
+            "Camera",
+            "Accelerometer"
+        ]
+    },
+    "customConfigs": [],
+    "designerId": "application",
+    "$viewOrder": 0,
+    "iconCls": "icon-application",
+    "expanded": true
+}

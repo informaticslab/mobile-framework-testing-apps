@@ -1,0 +1,3 @@
+var data=[{title:'Music picker',hasChild:true,test:'../examples/music_picker.js'},{title:'Music query',hasChild:true,test:'../examples/music_query.js'}];var tableview=Ti.UI.createTableView({data:data});tableview.addEventListener('click',function(e)
+{if(e.rowData.test)
+{var win=Ti.UI.createWindow({url:e.rowData.test,title:e.rowData.title});Ti.UI.currentTab.open(win,{animated:true});}});Ti.UI.currentWindow.add(tableview);

@@ -1,0 +1,2 @@
+var win=Ti.UI.currentWindow;var imageView=Ti.UI.createImageView({height:200,width:200,top:20,left:10,backgroundColor:'#999'});win.add(imageView);Ti.Media.takeScreenshot(function(event)
+{imageView.image=event.media;win.setBackgroundColor('red');var a=Ti.UI.createAlertDialog();a.setTitle('Screenshot');a.setMessage('See screenshot of this page');a.setButtonNames(['OK']);a.show();});

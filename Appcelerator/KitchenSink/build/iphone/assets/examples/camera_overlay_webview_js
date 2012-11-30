@@ -1,0 +1,9 @@
+var win=Ti.UI.currentWindow;var overlay=Ti.UI.createView();var html='<html><body>';html+='<div id="button" style="background-color:red;height:80px;width:200px;color:white;text-align:center;line-height:80px">Take Photo</div>';html+='<script>document.getElementById("button").onclick= function(){Ti.App.fireEvent("camera_button")}</script>';html+='</body></html>';var webview=Ti.UI.createWebView({bottom:10,height:80,width:200,backgroundColor:'#ff0000',html:html});overlay.add(webview);Ti.App.addEventListener('camera_button',function()
+{Ti.Media.takePicture();});Ti.Media.showCamera({success:function(event)
+{Ti.API.debug("picture was taken");var imageView=Ti.UI.createImageView({image:event.media});win.add(imageView);Ti.Media.hideCamera();},cancel:function()
+{},error:function(error)
+{var a=Ti.UI.createAlertDialog({title:'Camera'});if(error.code==Ti.Media.NO_CAMERA)
+{a.setMessage('Please run this test on device');}
+else
+{a.setMessage('Unexpected error: '+error.code);}
+a.show();},overlay:overlay,showControls:false,mediaTypes:Ti.Media.MEDIA_TYPE_PHOTO,autohide:false});

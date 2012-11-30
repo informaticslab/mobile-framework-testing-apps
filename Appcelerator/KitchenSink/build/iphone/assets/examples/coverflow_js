@@ -1,0 +1,3 @@
+var data=[{title:'Coverflow Local Files',hasChild:true,test:'../examples/coverflow_view.js'},{title:'Coverflow Remote Files',hasChild:true,test:'../examples/coverflow_remote.js'},{title:'Coverflow Replace Images',hasChild:true,test:'../examples/coverflow_replace.js'}];var tableview=Ti.UI.createTableView({data:data});tableview.addEventListener('click',function(e)
+{if(e.rowData.test)
+{var win=Ti.UI.createWindow({url:e.rowData.test,title:e.rowData.title});Ti.UI.currentTab.open(win,{animated:true});}});Ti.UI.currentWindow.add(tableview);

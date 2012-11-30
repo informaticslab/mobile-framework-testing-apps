@@ -1,0 +1,13 @@
+var win=Ti.UI.currentWindow;var data=[];var lastRow=10;for(var c=0;c<lastRow;c++)
+{data[c]={title:"Row "+(c+1)};}
+var tableView=Ti.UI.createTableView({data:data});win.add(tableView);var navActInd=Ti.UI.createActivityIndicator();win.setRightNavButton(navActInd);var updating=false;var loadingRow=Ti.UI.createTableViewRow({title:"Loading..."});function beginUpdate()
+{updating=true;navActInd.show();tableView.appendRow(loadingRow);setTimeout(endUpdate,2000);}
+function endUpdate()
+{updating=false;tableView.deleteRow(lastRow,{animationStyle:Ti.UI.iPhone.RowAnimationStyle.NONE});for(var c=lastRow;c<lastRow+10;c++)
+{tableView.appendRow({title:"Row "+(c+1)},{animationStyle:Ti.UI.iPhone.RowAnimationStyle.NONE});}
+lastRow+=10;tableView.scrollToIndex(lastRow-9,{animated:true,position:Ti.UI.iPhone.TableViewScrollPosition.BOTTOM});navActInd.hide();}
+var lastDistance=0;tableView.addEventListener('scroll',function(e)
+{var offset=e.contentOffset.y;var height=e.size.height;var total=offset+height;var theEnd=e.contentSize.height;var distance=theEnd-total;if(distance<lastDistance)
+{var nearEnd=theEnd*.75;if(!updating&&(total>=nearEnd))
+{beginUpdate();}}
+lastDistance=distance;});

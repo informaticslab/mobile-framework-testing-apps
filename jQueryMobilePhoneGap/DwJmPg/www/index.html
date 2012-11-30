@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mobile Web App</title>
+<link href="jquery-mobile/jquery.mobile.theme-1.1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile.structure-1.1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="jquery-customization.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
+<script src="cordova-2.0.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/xui.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/lawnchair/adaptors/LawnchairAdaptorHelpers.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/lawnchair/adaptors/DOMStorageAdaptor.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/lawnchair/adaptors/WebkitSQLiteAdaptor.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/lawnchair/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/dsl.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>IRDA Eval</h1>
+  </div>
+  <div data-role="content">
+    <ul data-count-theme="b" data-role="listview"data-inset="true" data-filter="true "data-divider-theme="b">
+      <li><a href="#btnPage">Buttons</a></li>
+      <li><a href="#sliderPage">Sliders</a></li>
+      <li><a href="#checkboxPage">Checkboxes</a></li>
+      <li><a href="#textPage">Text Area</a></li>
+      <li><a href="#blockPage">Collapsible Block</a></li>
+      <li><a href="page/geolocation.html" rel="external">Maps</a></li>
+      <li><a href="page/camera.html" rel="external">Camera</a></li>
+        <li><a href="page/accelerometer.html" rel="external">Accelerometer</a></li>
+    </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4></h4>
+  </div>
+</div>
+<div id="btnPage" data-role="page">
+  <div data-role="header" data-add-back-btn="true" data-position="fixed">
+    <h1>Buttons</h1>
+  </div>
+  <div data-role="content">
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <button data-icon="home" data-theme="a">Home</button>
+      </div>
+      <div class="ui-block-b">
+        <button data-icon="check" data-theme="b">Check</button>
+      </div>
+      <div class="ui-block-a">
+        <button data-icon="refresh" data-theme="c">Refresh</button>
+      </div>
+      <div class="ui-block-b">
+        <button data-icon="alert" data-theme="d">Alert!</button>
+      </div>
+      <div class="ui-block-a">
+        <button data-icon="forward" data-theme="e">Forward</button>
+      </div>
+      <div class="ui-block-b">
+        <button data-icon="back" data-theme="e">Back</button>
+      </div>
+      <div class="ui-block-a">
+        <button data-icon="star" data-theme="a">Star</button>
+      </div>
+      <div class="ui-block-b">
+        <button data-icon="gear" data-theme="d">Gear</button>
+      </div>
+      <div class="ui-block-a"></div>
+      <div class="ui-block-b"></div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4></h4>
+  </div>
+</div>
+<div data-role="page" id="sliderPage">
+  <div data-role="header">
+    <h1>Sliders</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <label for="slider">Current Value:</label>
+      <input type="range" name="slider" id="slider" value="0" min="0" max="100" />
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4></h4>
+  </div>
+</div>
+<div data-role="page" id="checkboxPage">
+  <div data-role="header">
+    <h1>Checkbox</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend>Some of my favorite colors are:</legend>
+        <input type="checkbox" name="Checkboxes" id="Checkboxes_0" class="custom" value="" />
+        <label for="Checkboxes_0">Red</label>
+        <input type="checkbox" name="Checkboxes" id="Checkboxes_1" class="custom" value="" />
+        <label for="Checkboxes_1">Green</label>
+        <input type="checkbox" name="Checkboxes" id="Checkboxes_2" class="custom" value="" />
+        <label for="Checkboxes_2">Blue</label>
+      </fieldset>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4></h4>
+  </div>
+</div>
+<div data-role="page" id="textPage">
+  <div data-role="header">
+    <h1>Text Area</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <label for="textarea">Enter text here:</label>
+      <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4></h4>
+  </div>
+</div>
+<div data-role="page" id="blockPage">
+  <div data-role="header">
+    <h1>Collapsible Block</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="collapsible-set" data-content-theme="c">
+      <div data-role="collapsible">
+        <h3>Cars</h3>
+        <p>Here is a list of Car Manufacturers</p>
+        <div data-role="collapsible">
+          <h3>Ford</h3>
+          <p>Ford is headquartered in Dearborn, Michigan and makes a wide variety of truck and cars.</p>
+          <div data-role="collapsible">
+            <h3>Mustang</h3>
+            <p>The Mustang is Ford's premier sports car.</p>
+          </div>
+        </div>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>Motorcycles</h3>
+        <p>Content</p>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>Trucks</h3>
+        <p>Content</p>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4></h4>
+  </div>
+</div>
+</body>
+</html>

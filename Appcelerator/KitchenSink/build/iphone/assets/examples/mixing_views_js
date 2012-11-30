@@ -1,0 +1,3 @@
+var data=[{title:'Example 1',hasChild:true,test:'../examples/mixing_views_1.js'},{title:'Example 2',hasChild:true,test:'../examples/mixing_views_2.js'},{title:'Example 3',hasChild:true,test:'../examples/mixing_views_3.js'},{title:'Example 4',hasChild:true,test:'../examples/mixing_views_4.js'}];var tableview=Ti.UI.createTableView({data:data});tableview.addEventListener('click',function(e)
+{if(e.rowData.test)
+{var win=Ti.UI.createWindow({url:e.rowData.test,title:e.rowData.title});Ti.UI.currentTab.open(win,{animated:true});}});Ti.UI.currentWindow.add(tableview);

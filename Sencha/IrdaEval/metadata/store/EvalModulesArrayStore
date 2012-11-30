@@ -1,0 +1,51 @@
+{
+    "id": "ExtBox1-ext-gen5040",
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": "[{name:'Buttons'},{name:'Picker'},{name:'Images'},{name:'File IO'},{name:'Camera'},{name:'Sliders'},{name:'Accelerometer'}]\n",
+        "model": "EvalModulesModel",
+        "storeId": "EvalModulesArrayStore",
+        "designer|userClassName": "EvalModulesArrayStore"
+    },
+    "customConfigs": [],
+    "designerId": "d607c385-2c79-47c3-ad32-7e1ed67debfb",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen5047",
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen5054",
+                    "type": "arrayreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyArrayReader"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}

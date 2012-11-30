@@ -1,0 +1,5 @@
+var data=[{title:'Alan',hasChild:true,header:'header'},{title:'Alice',hasDetail:true},{title:'Alexander',hasCheck:true},{title:'Amos'},{title:'Alonzo',footer:'footer'}];var tableview=Ti.UI.createTableView({data:data});function showClickEventInfo(e,islongclick){var index=e.index;var section=e.section;var row=e.row;var rowdata=e.rowData;var msg='row '+row+' index '+index+' section '+section+' row data '+rowdata;if(islongclick){msg="LONGCLICK "+msg;}
+Ti.UI.createAlertDialog({title:'Table View',message:msg}).show();}
+tableview.addEventListener('click',function(e)
+{showClickEventInfo(e);});tableview.addEventListener('longclick',function(e)
+{showClickEventInfo(e,true);});Ti.UI.currentWindow.add(tableview);

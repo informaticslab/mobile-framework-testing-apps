@@ -1,0 +1,158 @@
+{
+    "id": "ExtBox1-ext-gen8243",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": [
+            "CameraView"
+        ],
+        "designer|userClassName": "Camera"
+    },
+    "customConfigs": [],
+    "designerId": "9e817447-c808-4a7d-ab69-f0afd323c480",
+    "$viewOrder": 1,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen3317",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "cameraButton",
+                "selector": "#cameraBtn",
+                "designer|userClassName": "cameraButton"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen3530",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onButtonTap",
+                "implHandler": [
+                    "console.log('Camera button press!');",
+                    "var me = this;",
+                    "// Take picture using device camera and retrieve image as base64-encoded string",
+                    "try {",
+                    "    console.log(\"inside try capture photo\");",
+                    "    var pictureSource=navigator.camera.PictureSourceType;",
+                    "    var destinationType=navigator.camera.DestinationType;",
+                    "    //navigator.camera.getPicture(this.onPhotoURISuccess, this.onFail, { quality: 50,",
+                    "    //destinationType: destinationType.FILE_URI });",
+                    "    navigator.camera.getPicture(me.onPhotoURISuccess,null,{sourceType:1,quality:60});",
+                    "",
+                    "}",
+                    "catch (err)",
+                    "{",
+                    "    alert(err);",
+                    "}",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#cameraBtn",
+                "designer|userClassName": "onButtonTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5133",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onFail",
+                "designer|params": [
+                    "message"
+                ],
+                "implHandler": [
+                    "   alert('Failed: ' + message);",
+                    ""
+                ],
+                "designer|userClassName": "onFail"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen5847",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onPhotoURISuccess",
+                "designer|params": [
+                    "imageURI"
+                ],
+                "implHandler": [
+                    "// Uncomment to view the image file URI",
+                    "// console.log(imageURI);",
+                    "",
+                    "// Get image handle",
+                    "//",
+                    "",
+                    "var me = this;",
+                    "var view = me.getPhotoView();",
+                    "console.log(\"photo view = \", view);",
+                    "",
+                    "",
+                    "",
+                    "// Show the captured photo",
+                    "// The inline CSS rules are used to resize the image",
+                    "//",
+                    "//console.log(\"image uri = %s\", imageURI);",
+                    "var img = Ext.create('Ext.Img', {",
+                    "    src: \"data:image/jpeg;base64,\" + imageURI,",
+                    "    height: 64,",
+                    "    width: 64",
+                    "});",
+                    "",
+                    "",
+                    "view.add(img);",
+                    "",
+                    ""
+                ],
+                "designer|userClassName": "onPhotoURISuccess"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9097",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "photoView",
+                "selector": "#photoContainer",
+                "designer|userClassName": "photoView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

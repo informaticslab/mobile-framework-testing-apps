@@ -1,0 +1,39 @@
+{
+    "id": "ExtBox1-ext-gen2949",
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "layout": "vbox",
+        "designer|userClassName": "ImageContainer"
+    },
+    "customConfigs": [],
+    "designerId": "d445d036-9e34-4758-99e1-0b79c01483cc",
+    "$viewOrder": 5,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen6242",
+            "type": "image",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "height": null,
+                "padding": null,
+                "width": null,
+                "src": "resources/images/cbr600rr.jpeg",
+                "designer|userClassName": "MyImage",
+                "layout|flex": 1
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}
